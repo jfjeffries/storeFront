@@ -1,0 +1,52 @@
+.wrapper{
+    margin: 5px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-gap: 1em;
+    grid-auto-rows: auto 1fr auto;
+    grid-template-areas:
+        "header . . ."
+        "sidebar main sidebar"
+        "sidebar main sidebar"
+        "sidebar main sidebar"
+        "footer footer footer";
+}
+body{
+    font-family: 'Alegreya Sans';
+    background-image: url("https://us.123rf.com/450wm/martialred/martialred1507/martialred150700221/42412429-stock-vector-beautiful-vector-tree-silhouette-icon-for-websites.jpg?ver=6");
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+}
+h1{
+    color: rgb(41, 155, 155);
+}
+.wrapper > div{
+    border: 2px solid black;
+}
+.header{
+    grid-area: header;
+    border: 2px solid black;
+    background-color: gray;
+}
+
+.footer{
+    grid-area: footer;
+    border: 2px solid black;
+    background-color: rgb(194, 14, 14);
+    grid-column: 1/6;
+    grid-row: 3/4;   
+}
+
+.sidebar{
+    grid-area: sidebar;
+    border: 2px solid black;
+    background-color: gray;
+    
+}
+
+.article{
+    grid-area: main;
+    border: 2px solid black;
+    background-color: gray;    
+}
